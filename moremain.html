@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Page</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #38957342; 
+  }
+  .background-picture{
+    background-image: url(https://images.unsplash.com/flagged/photo-1556655678-9d4812e3fbe9?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-position: center;
+    z-index: -1;
+  }
+  .back-button-container{
+    display:flex;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .back-button {
+    background: #ecbe63da;
+    border-top: 1px solid #f7d289;
+    border-right: 1px solid rgb(242, 189, 105);
+    border-bottom: 1px solid rgb(242, 189, 105);
+    border-left: 1px solid rgb(242, 189, 105);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-box-shadow: inset 0 1px 10px 1px rgb(242, 189, 105), 0px 1px 0 rgb(255, 178, 54), 0 6px 0px #084430dc, 0 8px 4px 1px #000000aa;
+    -moz-box-shadow: inset 0 1px 10px 1px #ffdd99, 0px 1px 0 rgb(255, 178, 54), 0 6px 0px #084430dc, 0 8px 4px 1px #000000aa;
+    box-shadow: inset 0 1px 10px 1px #ffdd99, 0px 1px 0 rgb(255, 178, 54), 0 6px 0px #084430dc, 0 8px 4px 1px #000000aa;
+    color: #015443;
+    font: bold 20px "helvetica neue", helvetica, arial, sans-serif;
+    line-height: 1;
+    padding: 12px 0 12px 0;
+    text-align: center;
+    text-shadow: 2px -1px 1px #ef8b0996;
+    width: 140px;
+    -webkit-background-clip: padding-box;
+    margin: 10px;
+
+}
+
+  .back-button:hover {
+    -webkit-box-shadow: inset 0 0px 20px 1px rgb(255, 178, 54), 0px 1px 0 rgb(255, 178, 54), 0 6px 0px #084430dc, 0 8px 4px 1px #000000aa;
+    -moz-box-shadow: inset 0 0px 20px 1px rgb(255, 178, 54), 0px 1px 0 rgb(255, 178, 54), 0 6px 0px #084430dc, 0 8px 4px 1px #000000aa;
+    box-shadow: inset 0 0px 20px 1px rgb(255, 178, 54), 0px 1px 0 rgb(255, 178, 54), 0 6px 0px #084430dc, 0 8px 4px 1px #000000aa;
+    cursor: pointer;
+}
+
+  .back-button:active{
+    -webkit-box-shadow: inset 0 1px 10px 1px #ffdd99, 0 1px 0 rgb(255, 178, 54), 0 2px 0 #084430dc, 0 4px 3px 0 #000000aa;
+    -moz-box-shadow: inset 0 1px 10px 1px #ffdd99, 0 1px 0 rgb(255, 178, 54), 0 2px 0 #084430dc, 0 4px 3px 0 #000000aa;
+    box-shadow: inset 0 1px 10px 1px #ffdd99, 0 1px 0 rgb(255, 178, 54), 0 2px 0 #084430dc, 0 4px 3px 0 #000000aa;
+    transform: translateY(4px);
+  }
+
+
+  .about-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 35px;
+    background-color: #efbc63b7; 
+    color: #015443; 
+    margin: 0 auto; /* This will center the container horizontally */
+    width: 50%;
+    border-radius: 20px;
+    z-index: 2;
+}
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+<div class="back-button-container">
+    <button class="back-button" onclick="history.back()">Go Back</button>
+    <button class="back-button" onclick="showNextAbout()">Next</button>
+</div>
+
+<div class="background-picture"></div>
+ 
+  <div class="about-info">
+    <h2>How to start your programming journey?</h2>
+    <p>Begin by choosing a programming language. Popular options for beginners include Python, JavaScript, and Java.
+        Learn the fundamentals: variables, data types, loops, and conditionals.
+        Practice coding regularly. Solve small problems, participate in coding challenges, and build mini-projects.
+        Explore online platforms like Codecademy, freeCodeCamp, and edX for structured learning.</p>
+    <h3>Tip:</h3>
+    <p> Consistency is key. Dedicate regular time to coding, even if it’s just a few minutes each day. Building a habit will accelerate your progress.</p>
+  </div>
+  <div class="about-info hidden">
+    <h2>How to start your first project in programming?</h2>
+    <p>Start with a simple idea. It could be a to-do list app, a calculator, or a personal website.
+        Break down the project into smaller tasks. Plan the features and functionalities.
+        Use version control (e.g., Git) to track changes.
+        Seek help from online communities and forums when you get stuck.</p>
+    <h3>Tip:</h3>
+    <p>Start Small. Choose a simple project that aligns with your interests. Break it down into manageable tasks and build incrementally.
+    </p>
+  </div>
+  <div class="about-info hidden">
+    <h2>Freelance or working for a company?</h2>
+    <p>Freelancing: Offers flexibility, independence, and diverse projects. Requires self-discipline and business skills.
+        Company Job: Provides stability, mentorship, and teamwork. Exposure to larger projects and industry standards.</p>
+    <h3>Tip:</h3>
+    <p>Explore Both. Try freelancing to gain independence and diverse experiences. Consider a company job for stability and mentorship.
+    </p>
+  </div>
+
+  <div class="about-info hidden">
+    <h2>How to make the learning process faster?</h2>
+    <p>Manage energy, not just time. Prioritize focus and avoid all-nighters.
+      Understand your learning style. Adapt your approach to suit how you learn best.
+      Use a variety of learning techniques: Videos, hands-on practice, teaching others, etc.
+      Connect new information to what you already know. Build on existing knowledge4.</p>
+    <h3>Tip:</h3>
+    <p>Teach what you learn. Explaining concepts to others reinforces your understanding. Consider writing blog posts or creating video tutorials.</p>
+  </div>
+  <div class="about-info hidden">
+    <h2>What are some best tutorial resources?</h2>
+    <p>React.js Official Website: Learn React from its creators and developers.
+      Udemy: Offers a wide range of courses on various topics.
+      MasterClass: Learn practical skills from celebrities in different fields.
+      Skillshare: Access creative and practical courses.
+      YouTube: Explore countless tutorials and coding channels.
+      Udacity: Offers nanodegree programs and specialized courses.</p>
+    <h3>Tip:</h3>
+    <p>Diversify your sources. Combine video tutorials, written guides, and interactive platforms. Different formats cater to different learning styles.</p>
+  </div>
+
+  <div class="about-info hidden">
+    <h2>What is the future of programming?</h2>
+    <p>AI and Automation: AI will continue to impact programming, automating repetitive tasks.
+      Quantum Computing: Quantum languages like Q# will gain prominence.
+      Ethical Considerations: Developers will focus on ethical AI and responsible coding.
+      Diverse Languages: More specialized languages for specific domains.
+      Collaboration with AI: Developers will work alongside AI tools.</p>
+    <h3>Tip:</h3>
+    <p>Stay adaptable. Embrace new technologies and languages. Continuously learn and evolve to thrive in the ever-changing tech landscape.</p>
+  </div>
+
+  <div class="about-info hidden">
+    <h2>Will AI replace programmers?</h2>
+    <p>Not Entirely: AI can automate certain tasks, but human creativity, problem-solving, and critical thinking remain essential.
+      Collaboration: Programmers will work with AI tools to enhance productivity.
+      New Roles: Developers will adapt to new roles in the AI ecosystem.</p>
+    <h3>Tip:</h3>
+    <p>Learn to collaborate with AI. Understand how AI tools can enhance your productivity. Focus on skills that complement AI rather than compete with it.</p>
+  </div>
+  
+  
+  
+
+
+<script>
+ let currentAboutIndex = 0;
+  const aboutInfos = document.querySelectorAll('.about-info');
+
+  function showNextAbout() {
+    aboutInfos[currentAboutIndex].classList.add('hidden');
+    currentAboutIndex = (currentAboutIndex + 1) % aboutInfos.length;
+    aboutInfos[currentAboutIndex].classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
