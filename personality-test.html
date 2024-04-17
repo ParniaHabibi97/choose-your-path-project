@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Form</title>
+
+<style>
+
+
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF9E3; 
+  }
+
+   
+  #menuBar {
+    background-color: #006B3C; 
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #menuBar a {
+    color: #FFF9E3; 
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  #menuBar a:hover {
+    color:#FFA07A ;
+  }
+
+  .background-picture{
+    background-image: url(https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .header {
+    margin-top: 57px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: #919191;
+    
+    
+  }
+
+  .form-container {
+    max-width: 300px;
+    margin: 21px auto;
+    padding: 20px;
+    background-color: #e4c277;
+    color: #12531b; 
+    border-radius: 5px;
+    box-shadow: 0 9px #919191;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #d76f30;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    background-color: #10622f;
+    color: white;
+  }
+
+  select:hover {
+    border-color: #006B3C;
+  }
+
+  .button-container {
+    text-align: center;
+    
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #10622f;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 5px #777777;
+  }
+
+  button:hover {
+    background-color: #d76f30;
+    color: #ffffff;
+    border-radius: 50px;
+  }
+
+  .resultcontainer{
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e4c277;
+    color: #12531b; 
+    border-radius: 5px;
+    box-shadow: 0 9px #919191;
+  }
+
+  #resultText {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+    <div id="menuBar" >
+        <a href="index.html" >Home</a>
+        <a href="whyprogrammingmain.html" >why programming?</a>
+        <a href="cards.html" >paths</a>
+        <a href="formpagemain.html" >what area?</a>
+        <a href="moremain.html" >more</a>
+        
+
+    </div>
+    <div class="background-picture"></div>
+    <div class="header">
+      <h2>Please take this test and find your path baesd on your personality type:</h2>
+    </div>
+    <div class="button-container" ">
+        <a href="https://www.16personalities.com/free-personality-test"><button>take the test</button></a>
+    </div>
+    <div class="form-container">
+        <div class="form-group" id="question1Group">
+          <label for="question1">what is your personality type?</label>
+          <select id="question1" onchange="handleQuestionChange(1)">
+            <option value="">Select an option</option>
+            <option value="INTJ">INTJ (The Architect)</option>
+            <option value="ISTJ">ISTJ (The Inspector)</option>
+            <option value="ENTP">ENTP (The Visionary)</option>
+            <option value="INFP">INFP (The Healer)</option>
+            <option value="ISTP">ISTP (The Craftsman)</option>
+            <option value="ENFP">ENFP (The Champion)</option>
+            <option value="ESFJ">ESFJ (The Provider)</option>
+            <option value="ENTJ">ENTJ (The Commander)</option>
+            <option value="ISFP">ISFP (The Artist)</option>
+            <option value="ESTP">ESTP (The Dynamo)</option>
+          </select>
+        </div>
+        
+        
+        <div class="button-container" >
+          <button onclick="showResult()">Submit</button>
+        </div>
+        
+      </div>
+      <div class="resultcontainer" id="resultText">Your result will appear here.</div>
+
+
+      <script>
+     
+
+function showResult() {
+   var answer = document.getElementById('question1').value;
+   var resultText = '';
+   
+
+  if (answer === 'INTJ') {
+    resultText = 'Personality Traits: INTJs are analytical, creative, and have a strong drive to see connections where others might not. They demand high performance from themselves and those around them.Best Programming Areas:Software Engineering: INTJs excel in designing complex systems and solving intricate problems.Data Science and Analysis: Their analytical mindset makes them adept at handling large datasets and deriving insights.Entrepreneurship: INTJs may enjoy coding for their own startups or innovative ventures1.';
+  } else if (answer === 'ISTJ') {
+    resultText = 'Personality Traits: ISTJs are responsible, organized, and productive. They prefer clear rules and direction.Best Programming Areas:Quality Assurance (QA): ISTJs thrive in ensuring software quality by meticulously testing and validating code.Database Management: Their attention to detail suits tasks related to data integrity and organization.Backend Development: ISTJs can handle the structured logic behind server-side applications1.';
+  } else if (answer === 'ENTP') {
+    resultText = 'Personality Traits: ENTPs are curious, adaptable, and love exploring new ideas. They enjoy brainstorming and problem-solving.Best Programming Areas:Frontend Development: ENTPs can bring creativity to user interfaces and user experiences.Mobile App Development: Their adaptability suits the ever-evolving mobile landscape.Innovation and Prototyping: ENTPs thrive in experimental projects and proof-of-concept work1.';
+  }else if (answer === 'INFP') {
+    resultText = 'Personality Traits: INFPs are empathetic, imaginative, and value meaningful work. They seek purpose in their endeavors.Best Programming Areas:Web Development: INFPs can infuse creativity into web design and user interactions.Nonprofit and Social Impact Projects: They may find fulfillment in coding for causes they care about.Game Development: INFPs can contribute to storytelling and immersive game experiences1.';
+  }else if (answer === 'ENFP') {
+    resultText = 'Personality Traits: ENFPs are enthusiastic, adaptable, and love collaboration. They thrive on new challenges.Best Programming Areas:Full-Stack Development: ENFPs enjoy working across different layers of an application.Startups and Dynamic Environments: Their adaptability suits fast-paced, innovative settings.Creative Projects: ENFPs can contribute to projects that involve both technical and artistic elements1.';
+  }else if (answer === 'ISTP') {
+    resultText = 'Personality Traits: ISTPs are practical, hands-on, and enjoy solving real-world problems. They thrive in dynamic environments.Best Programming Areas:Embedded Systems: ISTPs can excel in low-level programming for hardware devices.Game Development (Graphics and Physics): Their practical mindset suits game physics and graphics programming.Cybersecurity: ISTPs may enjoy the challenge of securing systems and networks.';
+  }else if (answer === 'ESFJ') {
+    resultText = 'Personality Traits: ESFJs are warm, social, and value harmony. They enjoy helping others and working in collaborative settings.Best Programming Areas:User Experience (UX) Design: ESFJs can create intuitive and user-friendly interfaces.Project Management: Their organizational skills are valuable for coordinating development teams.Customer-Facing Applications: ESFJs thrive in roles that involve direct interaction with users.';
+  }else if (answer === 'ENTJ') {
+    resultText = 'Personality Traits: ENTJs are assertive, strategic, and natural leaders. They enjoy planning and executing complex projects.Best Programming Areas:Software Architecture: ENTJs can design scalable and efficient systems.Business Applications: Their strategic thinking aligns well with enterprise software development.Startups and Entrepreneurship: ENTJs may lead tech ventures or manage development teams.';
+  }else if (answer === 'ISFP') {
+    resultText = 'Personality Traits: ISFPs are creative, sensitive, and value aesthetics. They seek meaning in their work.Best Programming Areas:Frontend Development (UI/UX): ISFPs can infuse artistic flair into web and app interfaces.Graphic Design and Animation: Their creativity suits visual elements in software.Indie Game Development: ISFPs may enjoy creating unique and visually appealing games.';
+  }else if (answer === 'ESTP') {
+    resultText = 'Personality Traits: ESTPs are energetic, adaptable, and love challenges. They thrive in fast-paced environments.Best Programming Areas:Mobile App Development: ESTPs can handle the rapid changes in mobile technologies.DevOps and Automation: Their adaptability suits continuous integration and deployment.Hackathons and Prototyping: ESTPs enjoy quick problem-solving and building functional prototypes.';
+  }
+  else {
+    resultText = 'Please select an option for both questions.';
+  }
+
+  document.getElementById('resultText').textContent = resultText;
+  document.getElementById('resultText').style.display = 'block';
+}
+      </script>
+</body>
+</html>
