@@ -1,0 +1,1 @@
+This website caters to individuals who aspire to begin their programming journey. It provides guidance on selecting an appropriate programming language and offers insights into various programming domains. Additionally, the site features a dynamic form that tailors responses based on the user’s choices.
