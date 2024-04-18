@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Design</title>
+
+<style>
+
+
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF9E3; 
+  }
+
+   
+  #menuBar {
+    background-color: #006B3C; 
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #menuBar a {
+    color: #FFF9E3; 
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  #menuBar a:hover {
+    color:#FFA07A ;
+  }
+
+  .background-picture{
+    background-image: url(https://images.unsplash.com/photo-1542546068979-b6affb46ea8f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size:100%;
+    opacity: 0.35;
+    top: 37px;
+    left: 0;
+    bottom:-675px;
+    right: 0;
+    position: absolute;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .header {
+    margin-top: 57px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 21px auto;
+    }
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
+    th {
+        background-color: #009957;
+        color: white;
+    }
+    tr:nth-child(even) td {
+        background-color: #f2f2f2d7;
+    }
+    td:hover {
+        transform: scale(1.1);
+        background-color: #ffcf77;
+    }
+    .highlight {
+        background-color: #00c774 !important;
+    }
+  
+</style>
+</head>
+<body>
+    <div id="menuBar" >
+        <a href="index.html" >Home</a>
+        <a href="whyprogrammingmain.html" >why programming?</a>
+        <a href="cards.html" >paths</a>
+        <a href="personality-test.html" >personality type</a>
+        <a href="moremain.html" >more</a>
+       
+        
+
+    </div>
+    <div class="background-picture"></div>
+    <div class="header">
+      <h1>Comparison of Programming Languages:</h1>
+    </div>
+    
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Programming Language</th>
+                <th>Ratings</th>
+                <th>Advantages</th>
+                <th>Disadvantages</th>
+                <th>Difficulty</th>
+                <th>Job Demand</th>
+                <th>Salary (Average)</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>Python</td>
+                <td>1</td>
+                <td>- Versatile: Used in web development, data science, and automation.</td>
+                <td>- Slower Execution: Not ideal for CPU-intensive tasks.</td>
+                <td>Easy</td>
+                <td>High</td>
+                <td>$120,500</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>2</td>
+                <td>- Highly Efficient: Close to hardware, excellent for system-level programming.</td>
+                <td>- Manual Memory Management: Requires explicit memory allocation and deallocation.</td>
+                <td>Challenging</td>
+                <td>High</td>
+                <td>$104,566</td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td>3</td>
+                <td>- High Performance: Suitable for system-level programming and gaming.</td>
+                <td>- Complex Memory Management: Manual memory handling can be error-prone.</td>
+                <td>Challenging</td>
+                <td>High</td>
+                <td>$120,500</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>4</td>
+                <td>- Platform Independence: Runs on the Java Virtual Machine (JVM).</td>
+                <td>- Verbose Syntax: Requires more code compared to other languages.</td>
+                <td>Moderate</td>
+                <td>High</td>
+                <td>$120,500</td>
+            </tr>
+            <tr>
+                <td>C#</td>
+                <td>5</td>
+                <td>- Strongly Typed: Robust language for Windows development.</td>
+                <td>- Windows-Centric: Primarily used for Microsoft technologies.</td>
+                <td>Moderate</td>
+                <td>High</td>
+                <td>$120,500</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>6</td>
+                <td>- Ubiquitous: Runs in browsers, making it essential for web development.</td>
+                <td>- Asynchronous Complexity: Callback hell and event-driven nature.</td>
+                <td>Moderate</td>
+                <td>High</td>
+                <td>$104,566</td>
+            </tr>
+            <tr>
+                <td>Go</td>
+                <td>7</td>
+                <td>- Efficiency: Fast compilation and execution.</td>
+                <td>- Small Ecosystem: Fewer libraries compared to other languages.</td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+                <td>$104,566</td>
+            </tr>
+            <tr>
+                <td>Visual Basic</td>
+                <td>8</td>
+                <td>- Simplicity: Easy to understand, especially for beginners.</td>
+                <td>- Memory Consumption: GUI components consume significant memory.</td>
+                <td>Easy</td>
+                <td>Moderate</td>
+                <td>$80,000 (approx.)</td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td>9</td>
+                <td>- Database Querying: Essential for managing relational databases.</td>
+                <td>- Narrow Scope: Limited to database operations.</td>
+                <td>Easy</td>
+                <td>High</td>
+                <td>$104,566</td>
+            </tr>
+            <tr>
+                <td>Fortran</td>
+                <td>10</td>
+                <td>- Efficiency: Exceptional speed for scientific computing.</td>
+                <td>- Memory Consumption: GUI components consume significant memory.</td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+                <td>$80,000 (approx.)</td>
+            </tr>
+            <tr>
+                <td>Delphi/Object Pascal</td>
+                <td>11</td>
+                <td>- Cross-Platform Capability: Same core code can adapt to Windows, Android, iOS, macOS, and Linux.</td>
+                <td>- Verbose Syntax: Contains over 300 reserved words.</td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+                <td>Varies</td>
+            </tr>
+            <tr>
+                <td>Assembly language</td>
+                <td>12</td>
+                <td>- Fine-Grained Control: Provides low-level programming for optimization.</td>
+                <td>- Complexity: Requires deep understanding of hardware architecture.</td>
+                <td>Challenging</td>
+                <td>Low</td>
+                <td>Varies</td>
+            </tr>
+            <tr>
+                <td>Ruby</td>
+                <td>13</td>
+                <td>- Elegant Syntax: Readable and expressive.</td>
+                <td>- Performance: Slower than some other languages.</td>
+                <td>Easy</td>
+                <td>Moderate</td>
+                <td>$104,566</td>
+            </tr>
+            <tr>
+                <td>Swift</td>
+                <td>14</td>
+                <td>- iOS Development: Ideal for building iOS and macOS apps.</td>
+                <td>- Limited Platform Support: Primarily used for Apple ecosystem.</td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+                <td>$104,566</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>17</td>
+                <td>- Web Development: Widely used for server-side scripting and web applications.</td>
+                <td>- Inconsistent Syntax: Can be challenging for beginners due to inconsistent function names.</td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+                <td>$80,000</td>
+            </tr>
+            <tr>
+                <td>Kotlin</td>
+                <td>18</td>
+                <td>- Interoperability: Works seamlessly with Java.</td>
+                <td>- Smaller Community: Fewer resources and libraries compared to Java.</td>
+                <td>Easy</td>
+                <td>Moderate</td>
+                <td>$104,566</td>
+            </tr>
+            <tr>
+                <td>Rust</td>
+                <td>19</td>
+                <td>- Memory Safety: Strong guarantees without sacrificing performance.</td>
+                <td>- Learning Curve: Unusual syntax and ownership model.</td>
+                <td>Challenging</td>
+                <td>Moderate</td>
+                <td>$104,566</td>
+            </tr>
+            <tr>
+                <td>R</td>
+                <td>20</td>
+                <td>- Data Analysis: Excellent for statistical computing and data visualization.</td>
+                <td>- Steep Learning Curve: Requires understanding of statistical concepts.</td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+                <td>$90,000</td>
+            </tr>
+            <tr>
+                <td>COBOL</td>
+                <td>21</td>
+                <td>- Business-Oriented: Designed for business use in finance and administration.</td>
+                <td>- Verbose Syntax: Contains over 300 reserved words.</td>
+                <td>Moderate</td>
+                <td>Moderate</td>
+                <td>Varies</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const table = document.getElementById('myTable');
+        const rows = table.getElementsByTagName('tr');
+    
+        function handleCellClick(event) {
+            const cell = event.target;
+            const row = cell.parentElement;
+    
+            for (let i = 0; i < rows.length; i++) {
+                rows[i].classList.remove('highlight');
+            }
+    
+            row.classList.add('highlight');
+        }
+    
+        table.addEventListener('click', handleCellClick);
+    
+        function handleOutsideClick(event) {
+            if (!table.contains(event.target)) {
+                for (let i = 0; i < rows.length; i++) {
+                    rows[i].classList.remove('highlight');
+                }
+            }
+        }
+    
+        document.addEventListener('click', handleOutsideClick);
+    </script>
+
+</body>
+</html>
