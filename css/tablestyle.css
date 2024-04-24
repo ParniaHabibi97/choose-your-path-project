@@ -1,0 +1,85 @@
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF9E3; 
+  }
+
+   
+  #menuBar {
+    background-color: #006B3C; 
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #menuBar a {
+    color: #FFF9E3; 
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  #menuBar a:hover {
+    color:#FFA07A ;
+  }
+
+  .background-picture{
+    background-image: url(https://images.unsplash.com/photo-1542546068979-b6affb46ea8f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size:100%;
+    opacity: 0.35;
+    top: 37px;
+    left: 0;
+    bottom:-675px;
+    right: 0;
+    position: absolute;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .header {
+    margin-top: 57px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 21px auto;
+    }
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd;
+        transition: all 0.3s ease;
+    }
+    th {
+        background-color: #009957;
+        color: white;
+    }
+    tr:nth-child(even) td {
+        background-color: #f2f2f2d7;
+    }
+    td:hover {
+        transform: scale(1.1);
+        background-color: #ffcf77;
+    }
+    .highlight {
+        background-color: #00c774 !important;
+    }
+  
