@@ -24,7 +24,7 @@ body {
 .container {
     display: inline-block;
     padding: 50px;
-    background-color: #f3e272aa;
+    background-color: #fdf8c3bb;
     margin-bottom: 20px;
     border-radius: 12px;
     margin-top: 200px;
@@ -34,7 +34,7 @@ h1 {
     margin-bottom: 30px;
 }
 .button {
-    background-color: #10622f;
+    background-color: #3B6552;
     border: none;
     color: white;
     padding: 15px 32px;

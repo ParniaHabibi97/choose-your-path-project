@@ -1,5 +1,5 @@
 body {
-    background-color: #9b793fbe;
+    background-color: #3B6552;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,17 +13,17 @@ body {
   }
   .back-button {
     background: #007657;
-    border-top: 1px solid #02845a;
+    border-top: 1px solid #3B6552;
     border-right: 1px solid #1f2d4d;
     border-bottom: 1px solid #151e33;
     border-left: 1px solid #1f2d4d;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
-    -webkit-box-shadow: inset 0 1px 10px 1px #005642, 0px 1px 0 #0c352d, 0 6px 0px #063525, 0 8px 4px 1px #111111;
-    -moz-box-shadow: inset 0 1px 10px 1px #02845a, 0px 1px 0 #0c352d, 0 6px 0px #063525, 0 8px 4px 1px #111111;
-    box-shadow: inset 0 1px 10px 1px #02845a, 0px 1px 0 #0c352d, 0 6px 0px #063525, 0 8px 4px 1px #111111;
-    color: #ffdd99;
+    -webkit-box-shadow: inset 0 1px 10px 1px #4a8a6d, 0px 1px 0 #0c352d, 0 6px 0px #063525, 0 8px 4px 1px #111111;
+    -moz-box-shadow: inset 0 1px 10px 1px #4a8a6d, 0px 1px 0 #0c352d, 0 6px 0px #063525, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 1px 10px 1px #4a8a6d, 0px 1px 0 #0c352d, 0 6px 0px #063525, 0 8px 4px 1px #111111;
+    color: #FDF8C3;
     font: bold 20px "helvetica neue", helvetica, arial, sans-serif;
     line-height: 1;
     padding: 12px 0 12px 0;
@@ -42,9 +42,9 @@ body {
 }
 
   .back-button:active{
-    -webkit-box-shadow: inset 0 1px 10px 1px #02845a, 0 1px 0 #0c352d, 0 2px 0 #063525, 0 4px 3px 0 #111111;
-    -moz-box-shadow: inset 0 1px 10px 1px #02845a, 0 1px 0 #0c352d, 0 2px 0 #063525, 0 4px 3px 0 #111111;
-    box-shadow: inset 0 1px 10px 1px #02845a, 0 1px 0 #0c352d, 0 2px 0 #063525, 0 4px 3px 0 #111111;
+    -webkit-box-shadow: inset 0 1px 10px 1px #4a8a6d, 0 1px 0 #0c352d, 0 2px 0 #063525, 0 4px 3px 0 #111111;
+    -moz-box-shadow: inset 0 1px 10px 1px #4a8a6d, 0 1px 0 #0c352d, 0 2px 0 #063525, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #4a8a6d, 0 1px 0 #0c352d, 0 2px 0 #063525, 0 4px 3px 0 #111111;
     transform: translateY(4px);
   }
 
@@ -73,7 +73,7 @@ body {
   }
   .card {
     background-color: #216b51d8; 
-    color: #e9a700; 
+    color: #FDF8C3; 
     margin: 21px;
     padding: 35px;
     width: calc(33.333% - 20px);
@@ -94,15 +94,15 @@ body {
     transform: translateX(-50%);
   }
   .card h3 {
-    color: #f7c559; 
+    color: #FDF8C3; 
     margin: 0;
   }
   .card p {
     font-size: 16px;
-    color: #ffe9be;
+    color: #FDF8C3;
   }
   .card button {
-    background-color: #f1b900;
+    background-color: #FDF8C3;
     border: none;
     color: #36454F;
     padding: 10px 20px;
@@ -116,5 +116,5 @@ body {
     align-self: center;
   }
   .card button:hover {
-    background-color: #FFEA00;
+    background-color: #fff47d;
   }

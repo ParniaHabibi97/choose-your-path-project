@@ -12,29 +12,30 @@
 
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #FFF9E3; 
+    background-color: #fdf8c374; 
   }
 
    
   #menuBar {
-    background-color: #006B3C; 
+    background-color: #3B6552; 
     padding: 10px 0;
     text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    left: 0;
   }
 
   #menuBar a {
-    color: #FFF9E3; 
+    color: #ffffff; 
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
   }
 
   #menuBar a:hover {
-    color:#FFA07A ;
+    color:#fdf8c3 ;
   }
 
   .background-picture{
@@ -69,7 +70,7 @@
         transition: all 0.3s ease;
     }
     th {
-        background-color: #009957;
+        background-color: #3B6552;
         color: white;
     }
     tr:nth-child(even) td {
@@ -77,9 +78,9 @@
     }
     td:hover {
         transform: scale(1.1);
-        background-color: #ffcf77;
+        background-color: #FDF8C3;
     }
     .highlight {
-        background-color: #00c774 !important;
+        background-color: #3b655297 !important;
     }
   

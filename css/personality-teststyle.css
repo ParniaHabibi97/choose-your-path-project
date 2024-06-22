@@ -18,24 +18,25 @@
 
    
   #menuBar {
-    background-color: #006B3C; 
+    background-color: #3B6552; 
     padding: 10px 0;
     text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    left: 0;
   }
 
   #menuBar a {
-    color: #FFF9E3; 
+    color: #ffffff; 
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
   }
 
   #menuBar a:hover {
-    color:#FFA07A ;
+    color:#FDF8C3 ;
   }
 
   .background-picture{
@@ -64,8 +65,8 @@
     max-width: 300px;
     margin: 21px auto;
     padding: 20px;
-    background-color: #e4c277;
-    color: #12531b; 
+    background-color: #FDF8C3;
+    color: #3B6552; 
     border-radius: 5px;
     box-shadow: 0 9px #919191;
   }
@@ -84,15 +85,15 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #d76f30;
+    border: 1px solid #FDF8C3;
     border-radius: 5px;
     transition: border-color 0.3s;
-    background-color: #10622f;
+    background-color: #3B6552;
     color: white;
   }
 
   select:hover {
-    border-color: #006B3C;
+    border-color: #3B6552;
   }
 
   .button-container {
@@ -102,7 +103,7 @@
 
   button {
     padding: 10px 20px;
-    background-color: #10622f;
+    background-color: #3B6552;
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -122,8 +123,8 @@
     max-width: 300px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #e4c277;
-    color: #12531b; 
+    background-color: #FDF8C3;
+    color: #3B6552; 
     border-radius: 5px;
     box-shadow: 0 9px #919191;
   }
